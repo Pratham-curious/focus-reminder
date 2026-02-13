@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Focus Reminder",
-  "version": "1.1",
+  "version": "1.4",
   "description": "Reminds you of tasks before opening distracting sites.",
   "permissions": [
     "storage"
@@ -9,8 +9,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://www.youtube.com/*",
-        "*://www.instagram.com/*"
+        "*://*.youtube.com/*",
+        "*://*.instagram.com/*"
       ],
       "css": ["styles.css"],
       "js": ["content.js"],
