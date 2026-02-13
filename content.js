@@ -68,25 +68,30 @@ function startTimer(btn, timerDisplay, overlay, textArea) {
     timerDisplay.style.display = 'block';
 
     let timeLeft = 11;
-    
-    // We update the timer text immediately
     timerDisplay.innerText = timeLeft;
 
     const countdown = setInterval(() => {
         // --- STRICT MODE LOGIC ---
-        // If the user switches tabs, document.hidden becomes true
         if (document.hidden) {
-            // Pause the countdown!
-            // We don't decrease timeLeft.
-            // We can optionally change the tab title to yell at them
-            document.title = "⚠️ Come back!";
-            return; 
-        }
+            // 1. Change the text
+            timerDisplay.innerText = "Paused 🚫";
+            
+            // 2. Add the RED class
+            timerDisplay.classList.add('timer-paused');
+            
+            // 3. Change Tab Title
+            document.title = "⚠️ Timer Paused!";
+            return; // Stop here, don't decrease time
+        } 
         
-        // Reset title if they are back
+        // If we are back (not hidden):
+        // 1. Remove the RED class
+        timerDisplay.classList.remove('timer-paused');
+        
+        // 2. Fix the Tab Title
         document.title = "Focus Reminder";
-        // -------------------------
-
+        
+        // 3. Update the number normally
         timeLeft--;
         timerDisplay.innerText = timeLeft;
 

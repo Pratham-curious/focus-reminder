@@ -76,6 +76,14 @@
 }
 
 .timer-paused {
-  color: #ef4444 !important; /* Red color */
-  font-size: 2rem !important; /* Smaller text */
+  color: #ff4d4d !important; /* Bright Red */
+  font-size: 3rem !important; /* Smaller than the huge number */
+  text-shadow: none !important;
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
