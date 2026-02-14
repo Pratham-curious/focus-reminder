@@ -67,7 +67,7 @@ function startTimer(btn, timerDisplay, overlay, textArea) {
     textArea.style.display = 'none';
     timerDisplay.style.display = 'block';
 
-    let timeLeft = 11;
+    let timeLeft = 60;
     timerDisplay.innerText = timeLeft;
 
     const countdown = setInterval(() => {

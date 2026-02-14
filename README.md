@@ -44,16 +44,3 @@ Open `manifest.json` and add/remove URLs in the `matches` section:
   "*://*[.twitter.com/](https://.twitter.com/)*" <--- Add this for Twitter!
 ]
 ```
-
-### What was missing?
-
-1.  **`###`**: You need these hashtags before "Changing the Timer Duration" to make it a bold Heading.
-2.  **` ```javascript `**: You need the three backticks before the code starts to tell GitHub "This is code."
-3.  **` ``` `**: You need three backticks at the very end to close the code box.
-
-**Once you edit and commit this file on GitHub, don't forget to go back to VS Code and run:**
-`git pull origin main`
-
-```
-
-```
